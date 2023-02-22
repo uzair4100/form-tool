@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variables</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ 
+<style>
+    
+</style>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+                        
+            <div class="d-flex flex-column">                          
+                <div class="form-group">
+                    <label for="updateParams">Update Parameter</label>
+                    <textarea  class="form-control" id="updateParams" rows="9"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="updateCmd">Update Command</label>
+                    <textarea  class="form-control" id="updateCmd" rows="9"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="sqlParams">SQL Parameters</label>
+                    <textarea  class="form-control" id="sqlParams" rows="9"></textarea>
+                </div>
+            </div>
+
+    </div>
+                    
+   
+    <!--===================== script ============================-->
+    <script>
+        const path = require("path");
+        const fs = require("fs")
+        const http = require("http");
+        const os = require('os');
+        const electron = require("electron");
+        const {ipcRenderer} = electron;
+       
+        var updateParams= document.querySelector('#updateParams');
+        var updateCmd= document.querySelector('#updateCmd');
+        var sqlParams= document.querySelector('#sqlParams');
+      
+
+        //recieve data from main and fill in editor
+        ipcRenderer.on("help-window", function(e, data) {
+            console.log(data)
+            updateParams.value = data[0];
+            updateCmd.value = data[1];
+            sqlParams.value = data[2];
+           
+        })
+
+
+      
+    </script>
+        <script type="text/javascript" src="index.js"></script>
+
+</body>
+
+</html>
+
+
+<!-- function makeParameters(){
+    updateCommand = '';
+    updateParameters = '';
+    sqlParameters = '';
+    let result = []
+    let quizzes = quizContainer.querySelectorAll('.quiz');
+
+    for(let i=0; i<quizzes.length; i++){
+      let no = quizzes[i].querySelector('.no').innerText;
+        updateCommand += `,[q${no}] = @q${no}\n`;
+        updateParameters += `<asp:Parameter Name="q${no}" Type="String" />\n`; 
+        sqlParameters += `[q${no}] [nvarchar](200) NULL,\n`;
+    }
+    result = result.concat(updateParameters,updateCommand,sqlParameters);
+    return result;
+}
+
+if (button.id == "help") {
+    let parameters=makeParameters();
+   //console.log(parameters)
+  // let parameters =[]
+  // parameters = parameters.concat(updateParameters,updateCommand,sqlParameters)
+    ipcRenderer.send("help-window", parameters); //send event to main window to open modal window
+
+    //receive form data
+    ipcRenderer.on("help-data", function(e, parameters) {
+        help = prettifyXml(data);
+        console.log(help);
+    });
+} -->
+
+                         

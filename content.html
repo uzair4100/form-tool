@@ -1,0 +1,903 @@
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;"></span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_missing</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true"></span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:DropDownList ID="ddl_chrcbc_missing" CssClass="ddl_AnswerValue" runat="server" SelectedValue='<%# Bind("chrcbc_missing") %>'>
+   <asp:ListItem Value=""> -- </asp:ListItem>
+   <asp:ListItem Value="1">1. Please click if this form is missing all of its data</asp:ListItem>
+   <asp:ListItem Value="-3">-3. N/A</asp:ListItem>
+   <asp:ListItem Value="-9">-9. Missing data</asp:ListItem>
+</asp:DropDownList>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+             <td colspan="6">
+             <span class="lbl_QuestionText" style="display:inline-block;width:100%;"><div class="rich-text-field-label"><table style="border-collapse: collapse; width: 100%; height: 126px;" border="1"> <tbody> <tr style="height: 18px;"> <td style="width: 8.62789%; height: 18px; text-align: center; background-color: #7e8c8d; border-width: 2px;">Code</td> <td style="width: 37.553%; text-align: center; background-color: #7e8c8d; border-width: 2px;">Label</td> <td style="width: 50.5658%; height: 18px; text-align: center; background-color: #7e8c8d; border-width: 2px;">Description</td> </tr> <tr style="height: 36px;"> <td style="width: 8.62789%; height: 36px; background-color: #ced4d9; border-width: 2px; text-align: center;"><span style="font-weight: normal;">M1</span></td> <td style="width: 37.553%; background-color: #ced4d9; border-width: 2px;"><span style="font-weight: normal;">Measure refusal - no reason provided</span></td> <td style="width: 50.5658%; height: 36px; background-color: #ced4d9; border-width: 2px;"><span style="font-weight: normal;">Participant refused to do the measure either during the assessment or prior.</span></td> </tr> <tr style="height: 18px;"> <td style="width: 8.62789%; height: 18px; background-color: #ced4d9; border-width: 2px; text-align: center;"><span style="font-weight: normal;">M2</span></td> <td style="width: 37.553%; background-color: #ced4d9; border-width: 2px;"><span style="font-weight: normal;">No show</span></td> <td style="width: 50.5658%; height: 18px; background-color: #ced4d9; border-width: 2px;"><span style="font-weight: normal;">Participant did not show up for their scheduled appointment and was not able to be rebooked. E.g. participant did not verbally refuse to come, but they did not show, for e.g. the blood draw and you are now unable to reach them to re-book.</span></td> </tr> <tr style="height: 18px;"> <td style="width: 8.62789%; height: 18px; background-color: #ced4d9; border-width: 2px; text-align: center;"><span style="font-weight: normal;">M3</span></td> <td style="width: 37.553%; background-color: #ced4d9; border-width: 2px;"><span style="font-weight: normal;">Research assistant forgot</span></td> <td style="width: 50.5658%; height: 18px; background-color: #ced4d9; border-width: 2px;"><span style="font-weight: normal;">RA forgot to do one or more tasks and is unable to contact the participant to obtain the information.</span></td> </tr> <tr style="height: 18px;"> <td style="width: 8.62789%; height: 18px; background-color: #ced4d9; border-width: 2px; text-align: center;"><span style="font-weight: normal;">M4</span></td> <td style="width: 37.553%; background-color: #ced4d9; border-width: 2px;"><span style="font-weight: normal;">Uncontrollable circumstance</span></td> <td style="width: 50.5658%; height: 18px; background-color: #ced4d9; border-width: 2px;"><span style="font-weight: normal;">Circumstances beyond the control of the site, e.g. faulty equipment. If such circumstances occur sites will attempt to recollect the sample or do the assessment later but if this is impossible then this code will be used.</span></td> </tr> <tr style="height: 18px;"> <td style="width: 8.62789%; height: 18px; background-color: #ced4d9; border-width: 2px; text-align: center;"><span style="font-weight: normal;">M5</span></td> <td style="width: 37.553%; background-color: #ced4d9; border-width: 2px;"><span style="font-weight: normal;">Participant dropped out</span></td> <td style="width: 50.5658%; height: 18px; background-color: #ced4d9; border-width: 2px;"><span style="font-weight: normal;">The participant has been dropped from the study.</span></td> </tr> </tbody> </table></div></span><br>
+             <span class="lbl_FieldName" readonly="true">chrcbc_missing_table</span><br>
+             <span class="lbl_BranchingLogic" readonly="true">[chrcbc_missing]=1</span> 
+             </td>
+         </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;"><div class="rich-text-field-label"><p>Please specify the reason for missing data on this form</p></div></span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_missing_spec</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true">[chrcbc_missing]=1</span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:DropDownList ID="ddl_chrcbc_missing_spec" CssClass="ddl_AnswerValue" runat="server" SelectedValue='<%# Bind("chrcbc_missing_spec") %>'>
+   <asp:ListItem Value=""> -- </asp:ListItem>
+   <asp:ListItem Value="M1">M1. M1 - Measure refusal (no reason provided)</asp:ListItem>
+   <asp:ListItem Value="M2">M2. M2 - No show</asp:ListItem>
+   <asp:ListItem Value="M3">M3. M3 - Research assistant forgot</asp:ListItem>
+   <asp:ListItem Value="M4">M4. M4 - Uncontrollable circumstance</asp:ListItem>
+   <asp:ListItem Value="M5">M5. M5 - Participant dropped out</asp:ListItem>
+   <asp:ListItem Value="-3">-3. N/A</asp:ListItem>
+   <asp:ListItem Value="-9">-9. Missing data</asp:ListItem>
+</asp:DropDownList>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">Date of blood draw</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_interview_date</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true"></span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_interview_date" runat="server" CssClass="tb_AnswerValue dtpSelector" Rows="1" Text='<%# Bind("chrcbc_interview_date", "{0:d}") %>'></asp:TextBox>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">Date of Data Entry</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_entry_date</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true"></span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_entry_date" runat="server" CssClass="tb_AnswerValue dtpSelector" Rows="1" Text='<%# Bind("chrcbc_entry_date", "{0:d}") %>'></asp:TextBox>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">REDCap Username:</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_redcap_user</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true"></span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_redcap_user" runat="server" CssClass="tb_AnswerValue" Rows="3" TextMode="MultiLine" Text='<%# Bind("chrcbc_redcap_user") %>'></asp:TextBox>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+             <td colspan="6">
+             <span class="lbl_QuestionText" style="display:inline-block;width:100%;"></span><br>
+             <span class="lbl_FieldName" readonly="true">chrcbc_instructions</span><br>
+             <span class="lbl_BranchingLogic" readonly="true"></span> 
+             </td>
+         </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;"><div class="rich-text-field-label"><p>Red Blood Cells (RBC)   </p> <p>units: 10^12/L, equivalent to 10^6/uL</p></div></span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_rbc</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true"></span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_rbc" runat="server" CssClass="tb_AnswerValue" Rows="1" Text='<%# Bind("chrcbc_rbc") %>'></asp:TextBox>
+  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;"><div class="rich-text-field-label"><p>Is the RBC result value outside of the RBC reference range provided by the report?</p></div></span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_rbcinrange</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true"></span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:DropDownList ID="ddl_chrcbc_rbcinrange" CssClass="ddl_AnswerValue" runat="server" SelectedValue='<%# Bind("chrcbc_rbcinrange") %>'>
+  <asp:ListItem Value=""> -- </asp:ListItem>
+  <asp:ListItem Value="0">0. No</asp:ListItem>
+  <asp:ListItem Value="1">1. Yes</asp:ListItem>
+  <asp:ListItem Value="-3">-3. N/A</asp:ListItem>
+  <asp:ListItem Value="-9">-9. Missing data</asp:ListItem>
+</asp:DropDownList>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;"><div class="rich-text-field-label"><p>For values outside of the reference range, enter the report's reference range <span style="text-decoration: underline;">lower limit</span> (in the units specified on this form).</p></div></span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_rbc_low</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true">[chrcbc_rbcinrange]='1'</span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_rbc_low" runat="server" CssClass="tb_AnswerValue" Rows="3" TextMode="MultiLine" Text='<%# Bind("chrcbc_rbc_low") %>'></asp:TextBox>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;"><div class="rich-text-field-label"><p>For values outside of the reference range, enter the report's reference range <span style="text-decoration: underline;">upper limit </span>(in the units specified on this form).</p></div></span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_rbc_high</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true">[chrcbc_rbcinrange]='1'</span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_rbc_high" runat="server" CssClass="tb_AnswerValue" Rows="3" TextMode="MultiLine" Text='<%# Bind("chrcbc_rbc_high") %>'></asp:TextBox>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;"><div class="rich-text-field-label"><p>Hematocrit (Hct)<br />units: % (percent)</p></div></span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_hct</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true"></span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_hct" runat="server" CssClass="tb_AnswerValue" Rows="1" Text='<%# Bind("chrcbc_hct") %>'></asp:TextBox>
+  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">Is the Hct result value outside of the Hct reference range provided by the report?</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_hctinrange</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true"></span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:DropDownList ID="ddl_chrcbc_hctinrange" CssClass="ddl_AnswerValue" runat="server" SelectedValue='<%# Bind("chrcbc_hctinrange") %>'>
+  <asp:ListItem Value=""> -- </asp:ListItem>
+  <asp:ListItem Value="0">0. No</asp:ListItem>
+  <asp:ListItem Value="1">1. Yes</asp:ListItem>
+  <asp:ListItem Value="-3">-3. N/A</asp:ListItem>
+  <asp:ListItem Value="-9">-9. Missing data</asp:ListItem>
+</asp:DropDownList>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;"><div class="rich-text-field-label"><p>For values outside of the reference range, enter the report's reference range <span style="text-decoration: underline;">lower limit</span> (in the units specified on this form).</p></div></span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_hct_low</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true">[chrcbc_hctinrange] = '1'</span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_hct_low" runat="server" CssClass="tb_AnswerValue" Rows="3" TextMode="MultiLine" Text='<%# Bind("chrcbc_hct_low") %>'></asp:TextBox>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;"><div class="rich-text-field-label"><p>For values outside of the reference range, enter the report's reference range <span style="text-decoration: underline;">upper limit</span> (in the units specified on this form).</p></div></span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_hct_high</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true">[chrcbc_hctinrange] = '1'</span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_hct_high" runat="server" CssClass="tb_AnswerValue" Rows="3" TextMode="MultiLine" Text='<%# Bind("chrcbc_hct_high") %>'></asp:TextBox>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;"><div class="rich-text-field-label"><p>Hemoglobin (Hgb)</p> <p>units: g/L</p></div></span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_hgb</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true"></span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_hgb" runat="server" CssClass="tb_AnswerValue" Rows="1" Text='<%# Bind("chrcbc_hgb") %>'></asp:TextBox>
+  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;"><div class="rich-text-field-label"><p>Is the Hgb result value outside of the Hgb reference range provided by the report?</p></div></span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_hgbinrange</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true"></span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:DropDownList ID="ddl_chrcbc_hgbinrange" CssClass="ddl_AnswerValue" runat="server" SelectedValue='<%# Bind("chrcbc_hgbinrange") %>'>
+  <asp:ListItem Value=""> -- </asp:ListItem>
+  <asp:ListItem Value="0">0. No</asp:ListItem>
+  <asp:ListItem Value="1">1. Yes</asp:ListItem>
+  <asp:ListItem Value="-3">-3. N/A</asp:ListItem>
+  <asp:ListItem Value="-9">-9. Missing data</asp:ListItem>
+</asp:DropDownList>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;"><div class="rich-text-field-label"><p>For values outside of the reference range, enter the report's reference range <span style="text-decoration: underline;">lower limit</span> (in the units specified on this form).</p></div></span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_hgb_low</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true">[chrcbc_hgbinrange] = '1'</span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_hgb_low" runat="server" CssClass="tb_AnswerValue" Rows="3" TextMode="MultiLine" Text='<%# Bind("chrcbc_hgb_low") %>'></asp:TextBox>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;"><div class="rich-text-field-label"><p>For values outside of the reference range, enter the report's reference range <span style="text-decoration: underline;">upper limit</span> (in the units specified on this form).</p></div></span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_hgb_high</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true">[chrcbc_hgbinrange]= '1'</span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_hgb_high" runat="server" CssClass="tb_AnswerValue" Rows="3" TextMode="MultiLine" Text='<%# Bind("chrcbc_hgb_high") %>'></asp:TextBox>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;"><div class="rich-text-field-label"><p>Mean corpuscular volume (MCV)<br />units: fL (femtoliter)</p></div></span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_mcv</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true"></span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_mcv" runat="server" CssClass="tb_AnswerValue" Rows="1" Text='<%# Bind("chrcbc_mcv") %>'></asp:TextBox>
+  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">Is the MCV result value outside of the MCV reference range provided by the report?</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_mcvinrange</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true"></span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:DropDownList ID="ddl_chrcbc_mcvinrange" CssClass="ddl_AnswerValue" runat="server" SelectedValue='<%# Bind("chrcbc_mcvinrange") %>'>
+  <asp:ListItem Value=""> -- </asp:ListItem>
+  <asp:ListItem Value="0">0. No</asp:ListItem>
+  <asp:ListItem Value="1">1. Yes</asp:ListItem>
+  <asp:ListItem Value="-3">-3. N/A</asp:ListItem>
+  <asp:ListItem Value="-9">-9. Missing data</asp:ListItem>
+</asp:DropDownList>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">For values outside of the reference range, enter the report's reference range lower limit (in the units specified on this form).</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_mcv_low</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true">[chrcbc_mcvinrange]= '1'</span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_mcv_low" runat="server" CssClass="tb_AnswerValue" Rows="3" TextMode="MultiLine" Text='<%# Bind("chrcbc_mcv_low") %>'></asp:TextBox>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">For values outside of the reference range, enter the report's reference range upper limit (in the units specified on this form).</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_mcv_high</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true">[chrcbc_mcvinrange]= '1'</span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_mcv_high" runat="server" CssClass="tb_AnswerValue" Rows="3" TextMode="MultiLine" Text='<%# Bind("chrcbc_mcv_high") %>'></asp:TextBox>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">Mean corpuscular hemoglobin (MCH)
+units: pg (picogram)</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_mch</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true"></span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_mch" runat="server" CssClass="tb_AnswerValue" Rows="1" Text='<%# Bind("chrcbc_mch") %>'></asp:TextBox>
+  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">Is the MCH result value outside of the MCH reference range provided by the report?</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_mchinrange</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true"></span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:DropDownList ID="ddl_chrcbc_mchinrange" CssClass="ddl_AnswerValue" runat="server" SelectedValue='<%# Bind("chrcbc_mchinrange") %>'>
+  <asp:ListItem Value=""> -- </asp:ListItem>
+  <asp:ListItem Value="0">0. No</asp:ListItem>
+  <asp:ListItem Value="1">1. Yes</asp:ListItem>
+  <asp:ListItem Value="-3">-3. N/A</asp:ListItem>
+  <asp:ListItem Value="-9">-9. Missing data</asp:ListItem>
+</asp:DropDownList>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">For values outside of the reference range, enter the report's reference range lower limit (in the units specified on this form).</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_mch_low</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true">[chrcbc_mchinrange]= '1'</span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_mch_low" runat="server" CssClass="tb_AnswerValue" Rows="3" TextMode="MultiLine" Text='<%# Bind("chrcbc_mch_low") %>'></asp:TextBox>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">For values outside of the reference range, enter the report's reference range upper limit (in the units specified on this form).</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_mch_high</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true">[chrcbc_mchinrange]= '1'</span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_mch_high" runat="server" CssClass="tb_AnswerValue" Rows="3" TextMode="MultiLine" Text='<%# Bind("chrcbc_mch_high") %>'></asp:TextBox>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">Mean corpuscular hemoglobin concentration (MCHC)
+units: g/L (grams/liter)</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_mchc</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true"></span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_mchc" runat="server" CssClass="tb_AnswerValue" Rows="1" Text='<%# Bind("chrcbc_mchc") %>'></asp:TextBox>
+  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">Is the MCHC result value outside of the MCHC reference range provided by the report?</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_mchcinrange</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true"></span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:DropDownList ID="ddl_chrcbc_mchcinrange" CssClass="ddl_AnswerValue" runat="server" SelectedValue='<%# Bind("chrcbc_mchcinrange") %>'>
+  <asp:ListItem Value=""> -- </asp:ListItem>
+  <asp:ListItem Value="0">0. No</asp:ListItem>
+  <asp:ListItem Value="1">1. Yes</asp:ListItem>
+  <asp:ListItem Value="-3">-3. N/A</asp:ListItem>
+  <asp:ListItem Value="-9">-9. Missing data</asp:ListItem>
+</asp:DropDownList>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">For values outside of the reference range, enter the report's reference range lower limit (in the units specified on this form).</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_mchc_low</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true">[chrcbc_mchcinrange]= '1'</span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_mchc_low" runat="server" CssClass="tb_AnswerValue" Rows="3" TextMode="MultiLine" Text='<%# Bind("chrcbc_mchc_low") %>'></asp:TextBox>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">For values outside of the reference range, enter the report's reference range upper limit (in the units specified on this form).</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_mchc_high</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true">[chrcbc_mchcinrange]= '1'</span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_mchc_high" runat="server" CssClass="tb_AnswerValue" Rows="3" TextMode="MultiLine" Text='<%# Bind("chrcbc_mchc_high") %>'></asp:TextBox>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">Platelet Count
+units: 10^9/L equivalent to 10^3/uL</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_platelets</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true"></span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_platelets" runat="server" CssClass="tb_AnswerValue" Rows="1" Text='<%# Bind("chrcbc_platelets") %>'></asp:TextBox>
+  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">Is the platelet result value outside of the platelet reference range provided by the report?</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_platinrange</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true"></span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:DropDownList ID="ddl_chrcbc_platinrange" CssClass="ddl_AnswerValue" runat="server" SelectedValue='<%# Bind("chrcbc_platinrange") %>'>
+  <asp:ListItem Value=""> -- </asp:ListItem>
+  <asp:ListItem Value="0">0. No</asp:ListItem>
+  <asp:ListItem Value="1">1. Yes</asp:ListItem>
+  <asp:ListItem Value="-3">-3. N/A</asp:ListItem>
+  <asp:ListItem Value="-9">-9. Missing data</asp:ListItem>
+</asp:DropDownList>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">For values outside of the reference range, enter the report's reference range lower limit (in the units specified on this form).</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_plat_low</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true">[chrcbc_platinrange]= '1'</span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_plat_low" runat="server" CssClass="tb_AnswerValue" Rows="3" TextMode="MultiLine" Text='<%# Bind("chrcbc_plat_low") %>'></asp:TextBox>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">For values outside of the reference range, enter the report's reference range upper limit (in the units specified on this form).</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_plat_high</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true">[chrcbc_platinrange]= '1'</span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_plat_high" runat="server" CssClass="tb_AnswerValue" Rows="3" TextMode="MultiLine" Text='<%# Bind("chrcbc_plat_high") %>'></asp:TextBox>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">Is the Mean Platelet Volume available?</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_mpv_available</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true"></span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:DropDownList ID="ddl_chrcbc_mpv_available" CssClass="ddl_AnswerValue" runat="server" SelectedValue='<%# Bind("chrcbc_mpv_available") %>'>
+  <asp:ListItem Value=""> -- </asp:ListItem>
+  <asp:ListItem Value="0">0. No</asp:ListItem>
+  <asp:ListItem Value="1">1. Yes</asp:ListItem>
+  <asp:ListItem Value="-3">-3. N/A</asp:ListItem>
+  <asp:ListItem Value="-9">-9. Missing data</asp:ListItem>
+</asp:DropDownList>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">Mean Platelet Volume (MPV)
+units: fl (femtoliter)</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_mpv</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true">[chrcbc_mpv_available] = '1'</span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_mpv" runat="server" CssClass="tb_AnswerValue" Rows="3" TextMode="MultiLine" Text='<%# Bind("chrcbc_mpv") %>'></asp:TextBox>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">Is the MPV result value outside of the MPV reference range provided by the report?</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_mpvinrange</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true">[chrcbc_mpv_available] = '1'</span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:DropDownList ID="ddl_chrcbc_mpvinrange" CssClass="ddl_AnswerValue" runat="server" SelectedValue='<%# Bind("chrcbc_mpvinrange") %>'>
+  <asp:ListItem Value=""> -- </asp:ListItem>
+  <asp:ListItem Value="0">0. No</asp:ListItem>
+  <asp:ListItem Value="1">1. Yes</asp:ListItem>
+  <asp:ListItem Value="-3">-3. N/A</asp:ListItem>
+  <asp:ListItem Value="-9">-9. Missing data</asp:ListItem>
+</asp:DropDownList>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">For values outside of the reference range, enter the report's reference range lower limit (in the units specified on this form).</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_mpv_low</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true">[chrcbc_mpvinrange]= '1'</span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_mpv_low" runat="server" CssClass="tb_AnswerValue" Rows="3" TextMode="MultiLine" Text='<%# Bind("chrcbc_mpv_low") %>'></asp:TextBox>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">For values outside of the reference range, enter the report's reference range upper limit (in the units specified on this form).</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_mpv_high</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true">[chrcbc_mpvinrange]= '1'</span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_mpv_high" runat="server" CssClass="tb_AnswerValue" Rows="3" TextMode="MultiLine" Text='<%# Bind("chrcbc_mpv_high") %>'></asp:TextBox>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;"><div class="rich-text-field-label"><p>White Blood Cell Count (WBC)</p> <p>units: 10^9/L equivalent to 10^3/uL</p></div></span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_wbc</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true"></span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_wbc" runat="server" CssClass="tb_AnswerValue" Rows="1" Text='<%# Bind("chrcbc_wbc") %>'></asp:TextBox>
+  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">Is the WBC result value outside of the WBC reference range provided by the report?</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_wbcinrange</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true"></span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:DropDownList ID="ddl_chrcbc_wbcinrange" CssClass="ddl_AnswerValue" runat="server" SelectedValue='<%# Bind("chrcbc_wbcinrange") %>'>
+  <asp:ListItem Value=""> -- </asp:ListItem>
+  <asp:ListItem Value="0">0. No</asp:ListItem>
+  <asp:ListItem Value="1">1. Yes</asp:ListItem>
+  <asp:ListItem Value="-3">-3. N/A</asp:ListItem>
+  <asp:ListItem Value="-9">-9. Missing data</asp:ListItem>
+</asp:DropDownList>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">For values outside of the reference range, enter the report's reference range lower limit (in the units specified on this form).</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_wbc_low</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true">[chrcbc_wbcinrange]= '1'</span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_wbc_low" runat="server" CssClass="tb_AnswerValue" Rows="3" TextMode="MultiLine" Text='<%# Bind("chrcbc_wbc_low") %>'></asp:TextBox>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">For values outside of the reference range, enter the report's reference range upper limit (in the units specified on this form).</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_wbc_high</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true">[chrcbc_wbcinrange]= '1'</span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_wbc_high" runat="server" CssClass="tb_AnswerValue" Rows="3" TextMode="MultiLine" Text='<%# Bind("chrcbc_wbc_high") %>'></asp:TextBox>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">Absolute Neutrophil Count (Neut)
+units: 10^9/L equivalent to 10^3/uL</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_neut</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true"></span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_neut" runat="server" CssClass="tb_AnswerValue" Rows="1" Text='<%# Bind("chrcbc_neut") %>'></asp:TextBox>
+  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">Is the neutrophil count result value outside of the neutrophil count reference range provided by the report?</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_neutinrange</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true"></span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:DropDownList ID="ddl_chrcbc_neutinrange" CssClass="ddl_AnswerValue" runat="server" SelectedValue='<%# Bind("chrcbc_neutinrange") %>'>
+  <asp:ListItem Value=""> -- </asp:ListItem>
+  <asp:ListItem Value="0">0. No</asp:ListItem>
+  <asp:ListItem Value="1">1. Yes</asp:ListItem>
+  <asp:ListItem Value="-3">-3. N/A</asp:ListItem>
+  <asp:ListItem Value="-9">-9. Missing data</asp:ListItem>
+</asp:DropDownList>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">For values outside of the reference range, enter the report's reference range lower value (in the units specified on this form).</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_neut_low</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true">[chrcbc_neutinrange]= '1'</span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_neut_low" runat="server" CssClass="tb_AnswerValue" Rows="3" TextMode="MultiLine" Text='<%# Bind("chrcbc_neut_low") %>'></asp:TextBox>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">For values outside of the reference range, enter the report's reference range higher value (in the units specified on this form).</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_neut_high</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true">[chrcbc_neutinrange]= '1'</span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_neut_high" runat="server" CssClass="tb_AnswerValue" Rows="3" TextMode="MultiLine" Text='<%# Bind("chrcbc_neut_high") %>'></asp:TextBox>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">Absolute Lymphocyte Count (Lymph)
+units: 10^9/L equivalent to 10^3/uL</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_lymph</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true"></span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_lymph" runat="server" CssClass="tb_AnswerValue" Rows="1" Text='<%# Bind("chrcbc_lymph") %>'></asp:TextBox>
+  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">Is the absolute lymphocyte count result value outside of the reference range provided by the report?</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_lymphinrange</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true"></span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:DropDownList ID="ddl_chrcbc_lymphinrange" CssClass="ddl_AnswerValue" runat="server" SelectedValue='<%# Bind("chrcbc_lymphinrange") %>'>
+  <asp:ListItem Value=""> -- </asp:ListItem>
+  <asp:ListItem Value="0">0. No</asp:ListItem>
+  <asp:ListItem Value="1">1. Yes</asp:ListItem>
+  <asp:ListItem Value="-3">-3. N/A</asp:ListItem>
+  <asp:ListItem Value="-9">-9. Missing data</asp:ListItem>
+</asp:DropDownList>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">For values outside of the reference range, enter the report's reference range lower limit (in the units specified on this form).</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_lymph_low</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true">[chrcbc_lymphinrange]= '1'</span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_lymph_low" runat="server" CssClass="tb_AnswerValue" Rows="3" TextMode="MultiLine" Text='<%# Bind("chrcbc_lymph_low") %>'></asp:TextBox>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">For values outside of the reference range, enter the report's reference range upper limit (in the units specified on this form).</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_lymph_high</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true">[chrcbc_lymphinrange]= '1'</span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_lymph_high" runat="server" CssClass="tb_AnswerValue" Rows="3" TextMode="MultiLine" Text='<%# Bind("chrcbc_lymph_high") %>'></asp:TextBox>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">Absolute Monocyte Count (Monos)
+units: 10^9/L equivalent to 10^3/uL</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_monos</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true"></span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_monos" runat="server" CssClass="tb_AnswerValue" Rows="1" Text='<%# Bind("chrcbc_monos") %>'></asp:TextBox>
+  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">Is the absolute monocyte count result value outside of the reference range provided by the report?</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_monoinrange</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true"></span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:DropDownList ID="ddl_chrcbc_monoinrange" CssClass="ddl_AnswerValue" runat="server" SelectedValue='<%# Bind("chrcbc_monoinrange") %>'>
+  <asp:ListItem Value=""> -- </asp:ListItem>
+  <asp:ListItem Value="0">0. No</asp:ListItem>
+  <asp:ListItem Value="1">1. Yes</asp:ListItem>
+  <asp:ListItem Value="-3">-3. N/A</asp:ListItem>
+  <asp:ListItem Value="-9">-9. Missing data</asp:ListItem>
+</asp:DropDownList>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">For values outside of the reference range, enter the report's reference range lower value (in the units specified on this form).</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_mono_low</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true">[chrcbc_monoinrange]= '1'</span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_mono_low" runat="server" CssClass="tb_AnswerValue" Rows="3" TextMode="MultiLine" Text='<%# Bind("chrcbc_mono_low") %>'></asp:TextBox>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">For values outside of the reference range, enter the report's reference range higher value (in the units specified on this form).</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_mono_high</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true">[chrcbc_monoinrange]= '1'</span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_mono_high" runat="server" CssClass="tb_AnswerValue" Rows="3" TextMode="MultiLine" Text='<%# Bind("chrcbc_mono_high") %>'></asp:TextBox>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">Absolute Eosinophil Count (Eos)
+units: 10^9/L equivalent to 10^3/uL</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_eos</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true"></span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_eos" runat="server" CssClass="tb_AnswerValue" Rows="1" Text='<%# Bind("chrcbc_eos") %>'></asp:TextBox>
+  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">Is the absolute eosinophil count result value outside of the reference range provided by the report?</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_eosinrange</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true"></span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:DropDownList ID="ddl_chrcbc_eosinrange" CssClass="ddl_AnswerValue" runat="server" SelectedValue='<%# Bind("chrcbc_eosinrange") %>'>
+  <asp:ListItem Value=""> -- </asp:ListItem>
+  <asp:ListItem Value="0">0. No</asp:ListItem>
+  <asp:ListItem Value="1">1. Yes</asp:ListItem>
+  <asp:ListItem Value="-3">-3. N/A</asp:ListItem>
+  <asp:ListItem Value="-9">-9. Missing data</asp:ListItem>
+</asp:DropDownList>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">For values outside of the reference range, enter the report's reference range lower limit (in the units specified on this form).</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_eos_low</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true">[chrcbc_eosinrange]= '1'</span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_eos_low" runat="server" CssClass="tb_AnswerValue" Rows="3" TextMode="MultiLine" Text='<%# Bind("chrcbc_eos_low") %>'></asp:TextBox>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">For values outside of the reference range, enter the report's reference range upper limit (in the units specified on this form).</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrccbc_eos_high</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true">[chrcbc_eosinrange]= '1'</span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrccbc_eos_high" runat="server" CssClass="tb_AnswerValue" Rows="3" TextMode="MultiLine" Text='<%# Bind("chrccbc_eos_high") %>'></asp:TextBox>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">Absolute Basophil Count (Baso)
+units: 10^9/L equivalent to 10^3/uL</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_baso</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true"></span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_baso" runat="server" CssClass="tb_AnswerValue" Rows="1" Text='<%# Bind("chrcbc_baso") %>'></asp:TextBox>
+  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">Is the absolute basophil count result value outside of the reference range provided by the report?</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_basoinrange</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true"></span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:DropDownList ID="ddl_chrcbc_basoinrange" CssClass="ddl_AnswerValue" runat="server" SelectedValue='<%# Bind("chrcbc_basoinrange") %>'>
+  <asp:ListItem Value=""> -- </asp:ListItem>
+  <asp:ListItem Value="0">0. No</asp:ListItem>
+  <asp:ListItem Value="1">1. Yes</asp:ListItem>
+  <asp:ListItem Value="-3">-3. N/A</asp:ListItem>
+  <asp:ListItem Value="-9">-9. Missing data</asp:ListItem>
+</asp:DropDownList>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">For values outside of the reference range, enter the report's reference range lower limit (in the units specified on this form).</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_baso_low</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true">[chrcbc_basoinrange]= '1'</span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_baso_low" runat="server" CssClass="tb_AnswerValue" Rows="3" TextMode="MultiLine" Text='<%# Bind("chrcbc_baso_low") %>'></asp:TextBox>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">For values outside of the reference range, enter the report's reference range upper limit (in the units specified on this form).</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_baso_high</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true">[chrcbc_basoinrange]= '1'</span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices"></span>
+                     <asp:TextBox ID="chrcbc_baso_high" runat="server" CssClass="tb_AnswerValue" Rows="3" TextMode="MultiLine" Text='<%# Bind("chrcbc_baso_high") %>'></asp:TextBox>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+                 <td class="question-column">
+                 <span class="lbl_QuestionText" style="display:inline-block;width:100%;">Sum of absolute neutrophils, lymphocytes, monocytes, basophils, and eosinophils</span><br>
+                 <span class="lbl_FieldName" readonly="true">chrcbc_wbcsum</span><br>
+                 <span class="lbl_BranchingLogic" readonly="true"></span>
+                 
+                 </td>
+                     <td class="answer-column">
+                     <span class="lbl_Choices">if([chrcbc_neut]=-3 or [chrcbc_neut]=-9 or [chrcbc_lymph]=-3 or [chrcbc_lymph]=-9 or [chrcbc_monos]=-3 or [chrcbc_monos]=-9 or [chrcbc_eos]=-3 or [chrcbc_eos]=-9 or [chrcbc_baso]=-3 or [chrcbc_baso]=-9, 999, sum([chrcbc_neut],[chrcbc_lymph],[chrcbc_monos],[chrcbc_eos],[chrcbc_baso]))</span>
+                     <asp:TextBox ID="chrcbc_wbcsum" CssClass="calc_AnswerValue" runat="server" Rows="1" Text='<%# Bind("chrcbc_wbcsum") %>'></asp:TextBox>  
+                 </td>
+             </tr> 
+<tr class="cbc_with_differential">
+             <td colspan="6">
+             <span class="lbl_QuestionText" style="display:inline-block;width:100%;"><div class="yellow" style="text-align: center;"> <p style="text-align: left;">The sum of the absolute neutrophils, lymphocytes, monocytes, basophils, and eosinophils should approximately equal the white blood cell count. <span style="text-decoration: underline;">Please double-check the test results and fix as needed.</span></p> </div></span><br>
+             <span class="lbl_FieldName" readonly="true">chrcbc_wbcsum_error</span><br>
+             <span class="lbl_BranchingLogic" readonly="true">[chrcbc_wbcsum]-[chrcbc_wbc]>=0.15 or [chrcbc_wbcsum]-[chrcbc_wbc]<=-0.15 and ([chrcbc_wbc]<>'' and [chrcbc_neut]<>'' and [chrcbc_lymph]<>'' and [chrcbc_monos]<>'' and [chrcbc_eos]<>'' and [chrcbc_baso]<>'')</span> 
+             </td>
+         </tr> 

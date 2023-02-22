@@ -1,0 +1,61 @@
+{
+  "name": "form-tool",
+  "version": "1.0.7",
+  "repository": "https://github.com/uzair4100/form-tool",
+  "description": "Make interactives",
+  "author": "Uzair",
+  "license": "MIT",
+  "main": "main.js",
+  "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "electron .",
+      "pack": "electron-builder -mwl",
+      "dist": "electron-builder",
+      "publish": "electron-builder --win --x64 -p always",
+      "fix": "electron-fix start",
+      "dev": "nodemon --watch main.js --exec 'electron .'"
+
+  },
+  "build": {
+      "appId": "com.tool.quickstart",
+      "productName": "form tool",
+      "publish": [
+          {
+              "provider": "github",
+              "owner": "uzair4100",
+              "repo": "form-tool"
+          }
+      ],
+      "win": {
+          "publish": [
+              "github"
+          ],
+          "target": [
+              {
+                  "target": "nsis",
+                  "arch": [
+                      "x64"
+                  ]
+              }
+          ]
+      }
+  },
+  "devDependencies": {
+      "electron": "^6.1.12",
+      "electron-builder": "^22.10.5",
+      "electron-prebuilt": "^1.4.13"
+  },
+  "dependencies": {
+      "axios": "^0.21.1",
+      "cheerio": "^1.0.0-rc.3",
+      "csv-parser": "^3.0.0",
+      "electron-build": "0.0.3",
+      "electron-is-dev": "^2.0.0",
+      "jquery": "^3.6.0",
+      "nodemon": "^2.0.18",
+      "papaparse": "^5.3.2",
+      "prettify-xml": "^1.2.0",
+      "recursive-copy": "^2.0.11",
+      "recursive-readdir": "^2.2.2"
+  }
+}
